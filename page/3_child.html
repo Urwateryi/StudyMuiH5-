@@ -5,13 +5,117 @@
 		<meta charset="utf-8">
 		<title></title>
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
-		<link href="css/mui.css" rel="stylesheet" />
+		<link href="../css/mui.css" rel="stylesheet" />
 	</head>
 
 	<body>
-		<script src="js/mui.js"></script>
+		//不管是什麽標簽，只要class中包含有mui-action-back字樣的控件，都可以執行關閉界面的操作
+		<button type="button" class="mui-action-back mui-btn mui-btn-blue">按钮</button>
+		<ul class="mui-table-view">
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 1
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 2
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 3
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 4
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 5
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 6
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 7
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 8
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 9
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 10
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 11
+				</a>
+			</li>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 12
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 13
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 14
+				</a>
+			</li>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 15
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 16
+				</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<a class="mui-navigate-right">
+					Item 17
+				</a>
+			</li>
+		</ul>
+
+		<script src="../js/mui.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init();
+			mui.plusReady(function() {
+				var self = plus.webview.currentWebview();
+				var name = self.name;
+				console.log(name)
+
+// 				// 获得首页  专用的
+// 				var index = plus.webview.getLaunchWebview();
+// 
+// 				// 获得指定页面的对象 注意，要确保你的这个页面是存在的， 就是打开过的
+// 				var target = plus.webview.getWebviewById('目标页面的id');
+
+			});
 		</script>
 	</body>
 

@@ -13,14 +13,49 @@
 			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 			<h1 class="mui-title">3_創建子頁面</h1>
 		</header>
-		
+
 		<div class="mui-content">
 			3_創建子頁面
 		</div>
 		
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">电话</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-email"></span>
+				<span class="mui-tab-label">邮件</span>
+			</a>
+			<a class="mui-tab-item">
+				<span class="mui-icon mui-icon-gear"></span>
+				<span class="mui-tab-label">设置</span>
+			</a>
+		</nav>
+
 		<script src="../js/mui.js"></script>
 		<script type="text/javascript">
-			mui.init()
+			mui.init({
+				subpages: [{
+					url: "3_child.html", //子页面HTML地址，支持本地地址和网络地址
+					id: "3_child", //給子頁面取的id，唯一标识符，可以在获取子页面对象的时候，通过这个id去获取，子页面标志
+					styles: {
+						top: "44px", //子页面顶部位置,这里顶部默认是44px
+						bottom: "50px", //子页面底部位置,这里底部导航默认是50px
+// 						width: subpage - width, //子页面宽度，默认为100%
+// 						height: subpage - height, //子页面高度，默认为100%
+// 						......
+					},
+					//参数为json,以键值对的形式存在
+					extras: {
+						name:"zoey"
+					} //额外扩展参数
+				}]
+			})
 		</script>
 	</body>
 

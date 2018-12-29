@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../css/mui.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">4_target</h1>
+		</header>
+
+		<div class="mui-content">
+			目标页面
+		</div>
+
+		<script src="../js/mui.js"></script>
+		<script type="text/javascript">
+			mui.init({
+				swipeBack: true //启用右滑关闭功能
+			});
+
+			//如果父级页面设置的autoShow:为false的话,则本页面需要做两件事情
+			//1关闭等待框
+			//2显示本页面
+
+			setTimeout(function() {
+				mui.plusReady(function() {
+					// 				var self = plus.webview.currentWebview();
+					// 				var name = self.name;
+					// 				var http = self.http;
+					// 				console.log(name)
+
+					//1关闭等待框
+					plus.nativeUI.closeWaiting()
+
+					// 				//显示等待框(只有菊花)
+					// 				plus.nativeUI.showWaiting()
+					// 				//显示含内容和菊花的等待框
+					// 				plus.nativeUI.showWaiting("加载中...")
+
+					//2 显示本页面
+					var self = plus.webview.currentWebview();
+					self.show() //显示本页面
+					// self.show("zoom-fade-out")//带显示效果的展示
+				});
+			},2000)//模拟加载数据,5秒后再进来
+		</script>
+	</body>
+
+</html>
